@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    //Incorrect way to set innerHTML with multiple lines. This will only set the last line. 
+    document.getElementById("myDiv").innerHTML = "Line 1\n";
+    document.getElementById("myDiv").innerHTML = "Line 2\n";
+    document.getElementById("myDiv").innerHTML = "Line 3";
+  </script>
+</body>
+</html>
